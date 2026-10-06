@@ -17,7 +17,7 @@ ini_set('display_errors', true);
         $mail->Host         = 'smtp.gmail.com';                      // Specify main and backup SMTP servers
         $mail->SMTPAuth     = true;                               // Enable SMTP authentication
         $mail->Username     = 'aecc.uprb@upr.edu';                 // SMTP username
-        $mail->Password     = 'Bayamon*2019!';                         // SMTP password
+        $mail->Password     = getenv('SMTP_PASSWORD');                         // SMTP password
         $mail->SMTPSecure   = 'tls';                            // Enable TLS encryption, `ssl` also accepted
         $mail->Port         = 587;                                    // TCP port to connect to
         $mail->SMTPDebug = 2;
